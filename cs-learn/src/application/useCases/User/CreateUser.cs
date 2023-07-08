@@ -26,7 +26,7 @@ public class CreateUser
         this._passwordChecker = passwordChecker;
     }
 
-    async void execute(CreateUserDTO props)
+    async void execute(CreateUserDto props)
     {
         this.verifyUserExistence(props.Email);
         if (this._passwordChecker.IsPasswordWeak(props.Password))
@@ -59,7 +59,7 @@ public class CreateUser
         }
     }
 
-    private void generateUserCode(domain.entities.User user, CreateUserDTO props)
+    private void generateUserCode(domain.entities.User user, CreateUserDto props)
     {
         string code = this._usersCode.GenerateCode();
         MailerDto mailProps = new MailerDto(user.Name, user.Email, code);
