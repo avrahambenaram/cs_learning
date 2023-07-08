@@ -1,0 +1,15 @@
+/home/avraham/RiderProjects/cs-learn/cs-learn/bin/Debug/net7.0/cs-learn
+/home/avraham/RiderProjects/cs-learn/cs-learn/bin/Debug/net7.0/cs-learn.deps.json
+/home/avraham/RiderProjects/cs-learn/cs-learn/bin/Debug/net7.0/cs-learn.runtimeconfig.json
+/home/avraham/RiderProjects/cs-learn/cs-learn/bin/Debug/net7.0/cs-learn.dll
+/home/avraham/RiderProjects/cs-learn/cs-learn/bin/Debug/net7.0/cs-learn.pdb
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.csproj.AssemblyReference.cache
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.GeneratedMSBuildEditorConfig.editorconfig
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.AssemblyInfoInputs.cache
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.AssemblyInfo.cs
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.csproj.CoreCompileInputs.cache
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.dll
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/refint/cs-learn.dll
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.pdb
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/cs-learn.genruntimeconfig.cache
+/home/avraham/RiderProjects/cs-learn/cs-learn/obj/Debug/net7.0/ref/cs-learn.dll
