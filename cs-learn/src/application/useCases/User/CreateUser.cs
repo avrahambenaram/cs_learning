@@ -26,9 +26,9 @@ public class CreateUser
         this._passwordChecker = passwordChecker;
     }
 
-    async void execute(CreateUserDto props)
+    async void Execute(CreateUserDto props)
     {
-        this.verifyUserExistence(props.Email);
+        this.VerifyUserExistence(props.Email);
         if (this._passwordChecker.IsPasswordWeak(props.Password))
             throw new UseCaseError("Password too weak", 403);
 
@@ -38,11 +38,11 @@ public class CreateUser
             props.Email,
             props.Password
         );
-        this.generateUserCode(user, props);
-        this.deleteUserCodeAfter10Minutes(user.Email);
+        this.GenerateUserCode(user, props);
+        this.DeleteUserCodeAfter10Minutes(user.Email);
     }
 
-    private async void verifyUserExistence(string userEmail)
+    private async void VerifyUserExistence(string userEmail)
     {
         try
         {
@@ -59,7 +59,7 @@ public class CreateUser
         }
     }
 
-    private void generateUserCode(domain.entities.User user, CreateUserDto props)
+    private void GenerateUserCode(domain.entities.User user, CreateUserDto props)
     {
         string code = this._usersCode.GenerateCode();
         MailerDto mailProps = new MailerDto(user.Name, user.Email, code);
@@ -75,7 +75,7 @@ public class CreateUser
         this._usersCode.Save(userCodeProps);
     }
 
-    private void deleteUserCodeAfter10Minutes(string userEmail)
+    private void DeleteUserCodeAfter10Minutes(string userEmail)
     {
         IUsersCode usersCode = this._usersCode;
         long minutes10 = 1000 * 60 * 10;
