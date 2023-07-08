@@ -5,7 +5,7 @@ namespace cs_learn.application.services;
 public interface IUsersCode
 {
     string GenerateCode();
-    void Save(UserCodeDTO userCode);
-    UserCodeDTO FindByEmail(string email);
+    void Save(UserCodeDto userCode);
+    UserCodeDto FindByEmail(string email);
     void Delete(string email);
 }

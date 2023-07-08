@@ -7,7 +7,7 @@ public interface IUserRepository
 {
     Task<User> FindById(string userId);
     Task<User> FindByEmail(string email);
-    Task Update(string userId, UserUpdateDTO props);
+    Task Update(string userId, UserUpdateDto props);
     Task Save(User user);
     Task Delete(string userId);
 }

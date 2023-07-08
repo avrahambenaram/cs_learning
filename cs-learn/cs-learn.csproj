@@ -17,6 +17,8 @@
 
     <ItemGroup>
       <Compile Remove="src\application\services\Mailer.cs" />
+      <Compile Remove="src\application\useCases\User\Test.cs" />
+      <Compile Remove="src\application\services\dto\MailerDTO.cs" />
     </ItemGroup>
 
 </Project>

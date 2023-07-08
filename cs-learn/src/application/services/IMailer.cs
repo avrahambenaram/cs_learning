@@ -4,5 +4,5 @@ namespace cs_learn.application.services;
 
 public interface IMailer
 {
-    public Task sendConfirmationEmail(MailerDTO props);
+    public Task SendConfirmationEmail(MailerDto props);
 }

@@ -62,10 +62,10 @@ public class CreateUser
     private void generateUserCode(domain.entities.User user, CreateUserDTO props)
     {
         string code = this._usersCode.GenerateCode();
-        MailerDTO mailProps = new MailerDTO(user.Name, user.Email, code);
-        this._mailer.sendConfirmationEmail(mailProps);
+        MailerDto mailProps = new MailerDto(user.Name, user.Email, code);
+        this._mailer.SendConfirmationEmail(mailProps);
 
-        UserCodeDTO userCodeProps = new UserCodeDTO(
+        UserCodeDto userCodeProps = new UserCodeDto(
             code,
             user, 
             props.Address,
