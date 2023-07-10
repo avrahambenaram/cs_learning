@@ -5,7 +5,7 @@ using cs_learn.application.services.implementations;
 
 namespace cs_learn.infra.implementations;
 
-public class ProvidersTest : IProviders
+public class ProvidersFactoryTest : IProvidersFactory
 {
     private UserRepositoryMemory? _userRepository = null;
     private Encrypter? _encrypter = null;

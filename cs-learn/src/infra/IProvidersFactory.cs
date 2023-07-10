@@ -3,7 +3,7 @@ using cs_learn.application.services;
 
 namespace cs_learn.infra;
 
-public interface IProviders
+public interface IProvidersFactory
 {
     IUserRepository CreateUserRepository();
     IEncrypter CreateEncrypter();
