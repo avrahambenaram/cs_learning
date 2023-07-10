@@ -20,6 +20,15 @@
       <Compile Remove="src\application\useCases\User\Test.cs" />
       <Compile Remove="src\application\services\dto\MailerDTO.cs" />
       <Compile Include="src\application\services\dto\MailerDto.cs" />
+      <Compile Remove="src\application\useCases\User\CreateUserr.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="src\application\useCases\User\CreateUserr.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="src\application\useCases\User\CreateUserr.Tests\**" />
     </ItemGroup>
 
 </Project>
