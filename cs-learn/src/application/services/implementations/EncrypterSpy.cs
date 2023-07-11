@@ -1,6 +1,6 @@
 namespace cs_learn.application.services.implementations;
 
-public class Encrypter : IEncrypter
+public class EncrypterSpy : IEncrypter
 {
     public string Hash(string password)
     {

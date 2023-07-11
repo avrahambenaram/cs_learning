@@ -2,7 +2,7 @@ using cs_learn.application.services.dto;
 
 namespace cs_learn.application.services.implementations;
 
-public class Mailer : IMailer
+public class MailerSpy : IMailer
 {
     public List<MailerDto> ConfirmationEmails = new List<MailerDto>();
     public List<MailerDto> RecoverEmails = new List<MailerDto>();

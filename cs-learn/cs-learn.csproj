@@ -21,6 +21,7 @@
       <Compile Remove="src\application\services\dto\MailerDTO.cs" />
       <Compile Include="src\application\services\dto\MailerDto.cs" />
       <Compile Remove="src\application\useCases\User\CreateUserr.Tests\**" />
+      <Compile Remove="src\HelloWorld.cs" />
     </ItemGroup>
 
     <ItemGroup>

@@ -26,9 +26,9 @@ public class CreateUser
         this._passwordChecker = passwordChecker;
     }
 
-    async void Execute(CreateUserDto props)
+    public async Task Execute(CreateUserDto props)
     {
-        this.VerifyUserExistence(props.Email);
+        await this.VerifyUserExistence(props.Email);
         if (this._passwordChecker.IsPasswordWeak(props.Password))
             throw new UseCaseError("Password too weak", 403);
 
@@ -42,7 +42,7 @@ public class CreateUser
         this.DeleteUserCodeAfter10Minutes(user.Email);
     }
 
-    private async void VerifyUserExistence(string userEmail)
+    private async Task VerifyUserExistence(string userEmail)
     {
         try
         {

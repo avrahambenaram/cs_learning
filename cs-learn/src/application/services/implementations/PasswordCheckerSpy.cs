@@ -1,6 +1,6 @@
 namespace cs_learn.application.services.implementations;
 
-public class PasswordChecker : IPasswordChecker
+public class PasswordCheckerSpy : IPasswordChecker
 {
     private bool _isWeak = false;
     

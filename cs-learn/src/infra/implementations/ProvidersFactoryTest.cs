@@ -8,9 +8,9 @@ namespace cs_learn.infra.implementations;
 public class ProvidersFactoryTest : IProvidersFactory
 {
     private UserRepositoryMemory? _userRepository = null;
-    private Encrypter? _encrypter = null;
-    private Mailer? _mailer = null;
-    private PasswordChecker? _passwordChecker = null;
+    private EncrypterSpy? _encrypter = null;
+    private MailerSpy? _mailer = null;
+    private PasswordCheckerSpy? _passwordChecker = null;
     private UsersCode? _usersCode = null;
 
     public IUserRepository CreateUserRepository()
@@ -21,19 +21,19 @@ public class ProvidersFactoryTest : IProvidersFactory
 
     public IEncrypter CreateEncrypter()
     {
-        this._encrypter = this._encrypter ?? new Encrypter();
+        this._encrypter = this._encrypter ?? new EncrypterSpy();
         return this._encrypter;
     }
 
     public IMailer CreateMailer()
     {
-        this._mailer = this._mailer ?? new Mailer();
+        this._mailer = this._mailer ?? new MailerSpy();
         return this._mailer;
     }
 
     public IPasswordChecker CreatePasswordChecker()
     {
-        this._passwordChecker = this._passwordChecker ?? new PasswordChecker();
+        this._passwordChecker = this._passwordChecker ?? new PasswordCheckerSpy();
         return this._passwordChecker;
     }
 

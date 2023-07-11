@@ -25,7 +25,7 @@ public class CreateUserConfirm
         this._userRepository = userRepository;
     }
 
-    async Task<CreateUserConfirmResponseDto> Execute(CreateUserConfirmDto props)
+    public async Task<CreateUserConfirmResponseDto> Execute(CreateUserConfirmDto props)
     {
         UserCodeDto userCode = this._usersCode.FindByEmail(props.Email);
         await this.ValidateUserCode(userCode, props);
