@@ -27,9 +27,18 @@ public class CreateUserConfirm
 
     public async Task<CreateUserConfirmResponseDto> Execute(CreateUserConfirmDto props)
     {
-        UserCodeDto userCode = this._usersCode.FindByEmail(props.Email);
-        await this.ValidateUserCode(userCode, props);
-        return this._result;
+        try
+        {
+            var userCode = this._usersCode.FindByEmail(props.Email);
+            await this.ValidateUserCode(userCode, props);
+            return this._result;
+        }
+        catch (Exception err)
+        {
+            Console.WriteLine(err);
+            this._result.Message = "Código inexistente";
+            return this._result;
+        }
     }
 
     private async Task ValidateUserCode(UserCodeDto userCode, CreateUserConfirmDto props)

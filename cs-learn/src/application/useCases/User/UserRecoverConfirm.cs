@@ -65,5 +65,6 @@ public class UserRecoverConfirm
         await this._userRepository.Update(user.id, userUpdatedProps);
         
         this._usersCode.Delete(user.Email);
+        this._result.Success = true;
     }
 }
